@@ -19,6 +19,7 @@ const useFetchGifs = () => {
 			}, 2000);
 		});
 	}, []);
+
 	return state;
 };
 

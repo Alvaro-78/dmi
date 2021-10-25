@@ -1,9 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useFetchTvMaze from '../hooks/useFetchTvMaze';
 
 const Home = () => {
-	// const [categories, setCategories] = useState(['random']);
-
 	const { data, loading } = useFetchTvMaze();
 
 	return (
@@ -16,15 +15,34 @@ const Home = () => {
 			{loading && (
 				<p className="animate__animated animate__flash">Loading...</p>
 			)}
-			<div className="container-fluid">
-				<div className="card-grid">
+			<div className="container-fluid pt-4">
+				<div className="row row-cols-1 row-cols-md-4 g-4">
 					{data.map((showList) => {
 						return (
-							<div className="card" key={showList.id}>
-								{showList.show.name}
-								{showList.show.summary}
-								{/* {showList.show.image} */}
-							</div>
+							<Link
+								className="card-container"
+								to={{
+									pathname: 'show-movie',
+									aboutProps: {
+										image: showList.show.image?.original,
+										title: showList.show.name,
+										description: showList.show.summary,
+										genres: showList.show.genres,
+										language: showList.show.language,
+									},
+								}}
+							>
+								<div className="card">
+									<img
+										className="home-movie-img"
+										src={showList.show.image?.original}
+										alt="img"
+									/>
+									<div className="card-body">
+										<h5 className="card-title">{showList.show.name}</h5>
+									</div>
+								</div>
+							</Link>
 						);
 					})}
 				</div>

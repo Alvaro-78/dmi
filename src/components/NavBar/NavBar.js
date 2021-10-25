@@ -3,8 +3,8 @@ import React from 'react';
 const NavBar = () => {
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-				<div className="container-fluid justify-content-between">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div className="container-fluid ">
 					<div className="navbar-brand ">TV MAZE</div>
 					<button
 						className="navbar-toggler"
@@ -17,19 +17,6 @@ const NavBar = () => {
 					>
 						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div className="collapse navbar-collapse" id="navbarSupportedContent">
-						<form className="d-flex">
-							<input
-								className="form-control me-2"
-								type="search"
-								placeholder="Search"
-								aria-label="Search"
-							/>
-							<button className="btn btn-outline-success" type="submit">
-								Search
-							</button>
-						</form>
-					</div>
 				</div>
 			</nav>
 		</>
