@@ -11,11 +11,11 @@ const ShowMovie = (props) => {
 						src={props.location.aboutProps.image}
 						alt="img"
 					/>
-					<div className="card-body">
+					<p className="card-body">
 						<h5 className="card-title">
 							Title: {props.location.aboutProps.title}
 						</h5>
-					</div>
+					</p>
 					<p> Genre: {props.location.aboutProps.genres.join(',')}</p>
 					<p> Language: {props.location.aboutProps.language}</p>
 					<p className="description-style">

@@ -1,20 +1,12 @@
 .App {
 	text-align: center;
+	background-size: cover;
+	background-image: url(./assets/fondo-oscuro.jpg);
+	background-repeat: no-repeat, repeat;
 }
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
+p {
 	color: white;
-}
-
-.App-link {
-	color: #61dafb;
 }
 
 .header-title {
@@ -50,6 +42,7 @@
 	justify-content: space-around;
 	padding-top: 4rem;
 	width: 100%;
+	height: 100%;
 }
 
 .movie-img {

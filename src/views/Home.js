@@ -8,9 +8,9 @@ const Home = () => {
 	return (
 		<>
 			<div className="header-title">
-				<div>
+				<p>
 					<h1 className="title">TV MAZE SHOWS</h1>
-				</div>
+				</p>
 			</div>
 			{loading && (
 				<p className="animate__animated animate__flash">Loading...</p>
