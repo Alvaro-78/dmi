@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFetchTvMaze from '../hooks/useFetchTvMaze';
+import useFetchTvMaze from '../../hooks/useFetchTvMaze';
 
 const Home = () => {
 	const { data, loading } = useFetchTvMaze();

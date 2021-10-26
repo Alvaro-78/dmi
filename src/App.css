@@ -9,10 +9,6 @@ p {
 	color: white;
 }
 
-.header-title {
-	padding-top: 2rem;
-}
-
 .card-grid {
 	display: flex;
 	flex-direction: column;
@@ -20,17 +16,6 @@ p {
 	justify-content: center;
 	align-items: center;
 	width: 80%;
-}
-
-.card {
-	display: flex;
-	justify-content: center;
-	width: 80%;
-}
-
-.card-container {
-	display: flex;
-	justify-content: center;
 }
 
 .show-movie-info {
@@ -50,9 +35,23 @@ p {
 	height: 60%;
 }
 
-.home-movie-img {
-	height: 90%;
+/* Home  */
+
+.header-title {
+	padding-top: 2rem;
 }
 
-.description-style {
+.card-container {
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+
+.home-movie-img {
+	height: 90%;
 }
