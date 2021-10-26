@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetchGifs = () => {
+const useFetchTvMaze = () => {
 	const [state, setState] = useState({
 		data: [],
 		loading: true,
@@ -23,4 +23,4 @@ const useFetchGifs = () => {
 	return state;
 };
 
-export default useFetchGifs;
+export default useFetchTvMaze;

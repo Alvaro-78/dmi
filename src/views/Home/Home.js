@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useFetchTvMaze from '../../hooks/useFetchTvMaze';
 
+import picDefault from '../../assets/pic-default.jpg';
+
 const Home = () => {
 	const { data, loading } = useFetchTvMaze();
-
 	return (
 		<>
 			<div className="header-title">
-				<p>
-					<h1 className="title">TV MAZE SHOWS</h1>
-				</p>
+				<p className="title">TV MAZE SHOWS</p>
 			</div>
 			{loading && (
 				<p className="animate__animated animate__flash">Loading...</p>
@@ -32,12 +31,20 @@ const Home = () => {
 									},
 								}}
 							>
-								<div className="card">
-									<img
-										className="home-movie-img"
-										src={showList.show.image?.original}
-										alt="img"
-									/>
+								<div className="card" key={showList.id}>
+									{showList.show.image?.original == null ? (
+										<img
+											className="home-movie-img"
+											src={picDefault}
+											alt="img"
+										/>
+									) : (
+										<img
+											className="home-movie-img"
+											src={showList.show.image?.original}
+											alt="img"
+										/>
+									)}
 									<div className="card-body">
 										<h5 className="card-title">{showList.show.name}</h5>
 									</div>

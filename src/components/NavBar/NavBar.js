@@ -4,8 +4,10 @@ const NavBar = () => {
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-				<div className="container-fluid ">
-					<div className="navbar-brand ">TV MAZE</div>
+				<div className="container-fluid">
+					<a className="title" href="/">
+						TV MAZE
+					</a>
 					<button
 						className="navbar-toggler"
 						type="button"
